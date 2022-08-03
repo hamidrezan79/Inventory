@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="./build/tailwind.css">
+
+<body>
+    <div class="bg-slate-800 min-h-screen">
+        <!-- appbar -->
+        <div class="h-12 flex items-center justify-center gap-x-4 bg-slate-700 mb-6">
+            <h1 class="text-xl font-bold text-slate-300 ">Inventory App Using Tailwind & Js</h1>
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500
+         text-slate-300 border-2 border-slate-300 font-bold">7</span>
+        </div>
+        <!-- appcontent -->
+        <div class="container max-w-screen-sm mx-auto">
+            <!-- category form -->
+            <div class="mb-6">
+                <h2 class="text-xl text-slate-300 font-bold mb-2">Add New Category</h2>
+                <form class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4">
+                    <div>
+                        <label for="category-title" class="block mb-1 text-slate-400">Title</label>
+                        <input type="text" name="category-title" id="category-title" class="bg-transparent rounded-xl 
+                        border border-slate-500 text-slate-400">
+                    </div>
+                    <div>
+                        <label for="category-description" class="block mb-1 text-slate-400">Description</label>
+                        <textarea type="text" name="category-description" id="category-description"
+                            class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between gap-x-4">
+                        <button class="flex-1 border border-slate-400 text-slate-400 rounded-xl py-2 ">Cancel</button>
+                        <button class="flex-1 bg-slate-500 text-slate-200 rounded-xl py-2 ">Add New Category</button>
+                    </div>
+                </form>
+            </div>
+            <!-- product form -->
+            <div class="mb-6">
+                <h2 class="text-xl text-slate-300 font-bold mb-2">Add New Product</h2>
+                <form class="bg-slate-700 p-4 rounded-xl flex flex-col gap-y-4">
+                    <div>
+                        <label for="product-title" class="block mb-1 text-slate-400">Product Title</label>
+                        <input type="text" name="product-title" id="product-title" class="bg-transparent rounded-xl 
+                        border border-slate-500 text-slate-400" placeholder="Product Title...">
+                    </div>
+                    <div>
+                        <label for="quantity" class="block mb-1 text-slate-400">Quantity</label>
+                        <input type="number" name="quantity" id="quantity"
+                            class="bg-transparent rounded-xl border border-slate-500 text-slate-400  "
+                            placeholder="Quantity">
+                    </div>
+                    <div>
+                        <label for="category-option" class="block mb-1 text-slate-400">Category</label>
+                        <select name="category-select" id="category-select"
+                            class="bg-transparent rounded-xl border border-slate-500 text-slate-400 w-full">
+                            <option class="bg-slate-500 text-slate-300" selected disabled hidden>Select a Category
+                            </option>
+                            <option class="bg-slate-500 text-slate-300" value="backend">Back-End</option>
+                            <option class="bg-slate-500 text-slate-300" value="frontend">Front-End</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center justify-between gap-x-4">
+                        <button class="flex-1 bg-slate-500 text-slate-200 rounded-xl py-2 font-bold">
+                            Add New Product</button>
+                    </div>
+                </form>
+            </div>
+            <!-- product list -->
+            <h2 class="text-xl text-slate-300 font-bold mb-2">Product List</h2>
+            <div class="flex items-center justify-between">
+                <span class="text-slate-400">React.js</span>
+                <div class="flex items-center gap-x-3">
+                    <span class="text-slate-400">date</span>
+                    <span class="block  border border-slate-400 text-slate-400 text-sm 
+                    px-3 py-0.5 rounded-2xl">Front-End</span>
+                    <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-500
+                    text-slate-300 border-2 border-slate-300 ">10</span>
+                    <button class="border px-2 py-.5 rounded-full text-red-400 border-red-400">Delete</button>
+                </div>
+            </div>
+            <div class="h-20"></div>
+        </div>
+    </div>
+<script src="../src/js/app.js"></script>
+</body>
+
+</html>
